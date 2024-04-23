@@ -9,7 +9,7 @@ import {
     Title
 } from './styles'
   
-import { RootReducer } from '../../store'
+import { RootReducer, store } from '../../store'
 import { useDispatch, useSelector } from 'react-redux'
 import * as Yup from 'yup'
 import {close, remove, clear} from '../../store/reducers/cart'
@@ -192,7 +192,7 @@ const Cart = () => {
               <Prices>
                 Valor total <span>{formataPreco(getTotal())}</span>                
               </Prices>
-              <Button onClick={goToPurchase}>Continuar com a entrega</Button>                    
+              <Button>Continuar com a entrega</Button>                    
           </Sidebar>
         <Sidebar className={purchaseData ? '' : 'is-closed'}>
             <Title>Entrega</Title>

@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import ProfileHeader from "../../Components/ProfileHeader";
 import Banner from "../../Components/RestBanner";
 import ProductList from "../../Containers/ProductList";
 
@@ -14,6 +15,7 @@ const Restaurant = () => {
         
             return(
                 <>
+                    <ProfileHeader></ProfileHeader>
                     <Banner capa={currentRest.capa} tipo={currentRest.tipo} titulo={currentRest.titulo}></Banner>
                     <ProductList/>
                 </>
